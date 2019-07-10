@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 2</title>
+</head>
+<body>
+
+<script>
+    let arr1 = [10, 5, 2, 8, 7, 13];
+
+    function revers() {
+        for (let i = 0; i < arr1.length; i++) {
+            for (let t = 2; t <= Math.sqrt(arr1[i]); t++) {
+                if (arr1[i] % t == 0) {
+                } else {
+                    arr2 += arr1[i];
+                }
+            }
+        }
+        alert(arr2);
+    }
+    let arr2 = [];
+    revers();
+</script>
+</body>
+</html>
