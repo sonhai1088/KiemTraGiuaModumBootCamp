@@ -7,15 +7,21 @@
 <body>
 <script>
     let arr1 = [[1, 2], [3, 4]];
-    let arr2 = [];
-    function createArray(){
-        for (let i = 0; i < arr1.length; i++){
-            let x = i+3;
-            if (x % 2 == 0) {
-                
+    let arr2 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+    function createArray(arr) {
+        let arrNew = [];
+        for (let i = 0; i < arr.length; i++) {
+            if ((i+2) % 2 === 1){
+                arr[i] = arr[i].reverse();
             }
+            for (let j = 0; j < arr[i].length; j++) {
+                arrNew.push(arr[i][j]);
+            }
+        }return arrNew;
     }
-    createArray()
+
+    alert(createArray(arr1));
 </script>
 </body>
 </html>

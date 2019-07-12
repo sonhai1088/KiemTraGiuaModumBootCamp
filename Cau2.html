@@ -8,20 +8,31 @@
 
 <script>
     let arr1 = [10, 5, 2, 8, 7, 13];
-
-    function revers() {
-        for (let i = 0; i < arr1.length; i++) {
-            for (let t = 2; t <= Math.sqrt(arr1[i]); t++) {
-                if (arr1[i] % t == 0) {
-                } else {
-                    arr2 += arr1[i];
-                }
+    let arr2 = [12,4,6,3,6,42,675];
+    function listPrime(arr) {
+        let arrNew = [];
+        for (let i = 0; i < arr.length; i++){
+            if (isPrime(arr[i]) == true){
+                arrNew.push(arr[i]);
             }
         }
-        alert(arr2);
+        return arrNew;
     }
-    let arr2 = [];
-    revers();
+    function isPrime(input) {
+        let check = true;
+        if (input < 2) {
+            check = false;
+        }
+        for (let i = 2; i <= Math.sqrt(input); i++) {
+            if (input % i == 0) {
+                check = false;
+            } else {
+                check;
+            }
+        } return check;
+    }
+    alert(listPrime(arr1));
+    alert(listPrime(arr2));
 </script>
 </body>
 </html>

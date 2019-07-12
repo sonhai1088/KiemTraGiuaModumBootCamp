@@ -10,6 +10,9 @@
 
     function isPrime(input) {
         let check = true;
+        if (input < 2){
+            check = false;
+        }
         for(let i = 2; i <= Math.sqrt(input); i++) {
             if (input % i == 0) {
                 check = false;
